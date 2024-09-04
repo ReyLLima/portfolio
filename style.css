@@ -1,0 +1,157 @@
+/* Reset e Configurações Básicas */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* Estilo dos Títulos */
+h1, h2, h3 {
+    font-weight: bold;
+    color: #222;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: #337ab7;
+}
+
+a:hover {
+    color: #23527c;
+}
+
+/* Lista */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+/* Header Styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+header nav a {
+    color: #fff;
+}
+
+header nav a:hover {
+    color: #ccc;
+}
+
+/* Seções */
+section {
+    padding: 40px;
+}
+
+.intro {
+    background-color: #f0f0f0;
+    padding: 80px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.sobre, .projetos, .contato {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Animação de Fade-in quando o conteúdo estiver visível */
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Botões */
+.btn {
+    background-color: #337ab7;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #23527c;
+}
+
+/* Item de Projeto */
+.projeto-item {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.projeto-item h3 {
+    margin-top: 0;
+}
+
+.projeto-item a {
+    color: #337ab7;
+}
+
+.projeto-item a:hover {
+    color: #23527c;
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    clear: both;
+}
+
+footer p {
+    margin-bottom: 0;
+}
+
+/* Animação de Destaque nos Botões */
+nav ul li a {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: white;
+    left: 50%;
+    bottom: -5px;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+    left: 0;
+}
